@@ -33,7 +33,7 @@ class BackgroundTask {
     
     private func playAudio() {
         do {
-            let bundle = NSBundle.mainBundle().pathForResource("11", ofType: "wav")
+            let bundle = NSBundle.mainBundle().pathForResource("3", ofType: "wav")
             let alertSound = NSURL(fileURLWithPath: bundle!)
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions:AVAudioSessionCategoryOptions.MixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
