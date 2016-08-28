@@ -7,7 +7,7 @@ My version is simplified to a minumum to run the task forever in the background
 I also included a blank wav file that will be played forever until you stop the task
 
 ## Installation
-Copy manually file BackgroundTask.swift into your project.
+Copy manually file `BackgroundTask.swift` into your project.
 
 # Usage
 ```Swift
