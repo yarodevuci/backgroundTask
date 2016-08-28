@@ -1,4 +1,4 @@
-# backgroundTask
+# backgroundTask iOS Swift version
 
 This is an updated Swift version of the example of the Infinite Running Background Task written in Objective C
 http://hayageek.com/ios-long-running-background-task/ 
