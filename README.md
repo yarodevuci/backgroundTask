@@ -5,6 +5,7 @@ http://hayageek.com/ios-long-running-background-task/
 Infinite task is based on playing blank audio file.
 My version is simplified to a minumum to run the task forever in the background.
 I also included a blank wav file that will be played forever until you stop the task.
+*Note: Battery consuming is 10% for 24 hours period. 
 
 ## Installation
 Copy manually file `BackgroundTask.swift` into your project.
