@@ -10,10 +10,10 @@ I also included a blank wav file that will be played forever until you stop the 
 Copy manually file BackgroundTask.swift into your project.
 
 # Usage
-
+```Swift
 backgroundTask.startBackgroundTask() //Starts playing blank audio file. You can run NSTimer() or whatever you need and it will continue executing in the background.
 
 backgroundTask.stopBackgroundTask() //Stops the task
-
+```
 
 
