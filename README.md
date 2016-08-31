@@ -16,8 +16,10 @@ Copy manually file `BackgroundTask.swift` into your project.
 # Usage
 ```Swift
 var backgroundTask = BackgroundTask()
-backgroundTask.startBackgroundTask() //Starts playing blank audio file. You can run NSTimer() or whatever you need and it will continue executing in the background.
-
+//Start playing blank audio file. 
+//You can run NSTimer() or whatever you need and it will continue executing in the background.
+backgroundTask.startBackgroundTask() 
+//Stop the task when you don't need it 
 backgroundTask.stopBackgroundTask() //Stops the task
 ```
 
