@@ -7,7 +7,7 @@ My version is simplified to a minumum to run the task forever in the background.
 I also included a blank wav file that will be played forever until you stop the task.
 *Note: Battery consuming is 10% for 24 hours period. 
 
-#Youtube tutorial and overview 
+#YouTube tutorial and overview 
 https://www.youtube.com/watch?v=j7b35lFcMqM
 
 ## Installation
