@@ -1,5 +1,7 @@
 # backgroundTask iOS Swift version
 
+<span class="badge-paypal"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JAGFP3M6BG7LN" title="Donate to this project using PayPal"><img src="https://img.shields.io/badge/paypal-donate-yellow.svg" alt="PayPal Donation Button" /></a></span>
+
 This is an updated Swift version of the example of the Infinite Running Background Task written in Objective C
 http://hayageek.com/ios-long-running-background-task/ 
 Infinite task is based on playing blank audio file.
