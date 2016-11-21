@@ -15,6 +15,10 @@ https://www.youtube.com/watch?v=j7b35lFcMqM
 ## Installation
 Copy manually file `BackgroundTask.swift` into your project.
 
+#Warning
+Do NOT attemp to use my implementation if you are planning to push your app to the App Store. 
+Apple will 100% reject such behavior. This project was designed for research purposes or personal use.
+
 # Usage
 ```Swift
 var backgroundTask = BackgroundTask()
