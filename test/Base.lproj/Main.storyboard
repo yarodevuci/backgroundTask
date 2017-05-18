@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,61 +18,60 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aW-Ea-cw1">
-                                <rect key="frame" x="0.0" y="288" width="600" height="55"/>
-                                <color key="backgroundColor" red="0.72445598821989532" green="0.25337185462009687" blue="0.21619984942844159" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="10" y="288" width="355" height="55"/>
+                                <color key="backgroundColor" red="0.72445598821989532" green="0.25337185462009687" blue="0.21619984942844159" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="437-4Z-hPt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Stop Background Task">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="stopBackgroundTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jfj-fz-q0N"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buv-Hb-6Tb">
-                                <rect key="frame" x="0.0" y="388" width="600" height="50"/>
+                                <rect key="frame" x="10" y="388" width="355" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="E2Q-1u-fMy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2br-px-2ji">
-                                <rect key="frame" x="0.0" y="198" width="600" height="55"/>
-                                <color key="backgroundColor" red="0.3488469713279389" green="0.72445598821989532" blue="0.061411978936363527" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="10" y="198" width="355" height="55"/>
+                                <color key="backgroundColor" red="0.3488469713279389" green="0.72445598821989532" blue="0.061411978936363527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="H93-qm-XlA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Start Background Task">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="startBackgroundTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U0m-yd-pZR"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.030615581887777944" green="0.090929499528613011" blue="0.17500409031413611" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.030615581887777944" green="0.090929499528613011" blue="0.17500409031413611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="4aW-Ea-cw1" firstAttribute="top" secondItem="2br-px-2ji" secondAttribute="bottom" constant="35" id="0rn-5I-NOJ"/>
-                            <constraint firstItem="buv-Hb-6Tb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I7O-FF-ElG"/>
-                            <constraint firstItem="2br-px-2ji" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="UnH-yk-Cfx"/>
+                            <constraint firstItem="buv-Hb-6Tb" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="I7O-FF-ElG"/>
+                            <constraint firstItem="2br-px-2ji" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="UnH-yk-Cfx"/>
                             <constraint firstItem="4aW-Ea-cw1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="brk-mt-hPV"/>
                             <constraint firstItem="2br-px-2ji" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="178" id="esw-zm-alJ"/>
-                            <constraint firstItem="4aW-Ea-cw1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="h9g-Of-MZl"/>
+                            <constraint firstItem="4aW-Ea-cw1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-20" id="h9g-Of-MZl"/>
                             <constraint firstItem="buv-Hb-6Tb" firstAttribute="top" secondItem="4aW-Ea-cw1" secondAttribute="bottom" constant="45" id="mqE-e6-1pC"/>
                             <constraint firstItem="2br-px-2ji" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pLI-Rb-ajM"/>
                             <constraint firstItem="buv-Hb-6Tb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qvB-px-Q7g"/>
                         </constraints>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="label" destination="buv-Hb-6Tb" id="t42-No-JAc"/>
                         <outlet property="starTaskButton" destination="2br-px-2ji" id="QfE-eQ-daQ"/>
