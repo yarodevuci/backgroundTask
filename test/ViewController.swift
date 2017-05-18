@@ -14,24 +14,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var starTaskButton: UIButton!
     @IBOutlet weak var stopTaskButton: UIButton!
     
-    var timer = NSTimer()
+    var timer = Timer()
     var backgroundTask = BackgroundTask()
     
-    @IBAction func startBackgroundTask(sender: AnyObject) {
+    @IBAction func startBackgroundTask(_ sender: AnyObject) {
         backgroundTask.startBackgroundTask()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.timerAction), userInfo: nil, repeats: true)
         starTaskButton.alpha = 0.5
-        starTaskButton.userInteractionEnabled = false
+        starTaskButton.isUserInteractionEnabled = false
         
         stopTaskButton.alpha = 1
-        stopTaskButton.userInteractionEnabled = true
+        stopTaskButton.isUserInteractionEnabled = true
     }
     
-    @IBAction func stopBackgroundTask(sender: AnyObject) {
+    @IBAction func stopBackgroundTask(_ sender: AnyObject) {
         starTaskButton.alpha = 1
-        starTaskButton.userInteractionEnabled = true
+        starTaskButton.isUserInteractionEnabled = true
         stopTaskButton.alpha = 0.5
-        stopTaskButton.userInteractionEnabled = false
+        stopTaskButton.isUserInteractionEnabled = false
         
         timer.invalidate()
         backgroundTask.stopBackgroundTask()
@@ -42,18 +42,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stopTaskButton.alpha = 0.5
-        stopTaskButton.userInteractionEnabled = false
+        stopTaskButton.isUserInteractionEnabled = false
         
     }
     
     func timerAction() {
-        let date = NSDate()
-        let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([ .Hour, .Minute, .Second], fromDate: date)
+        let date = Date()
+        let calendar = Calendar.current
+        let components = (calendar as NSCalendar).components([ .hour, .minute, .second], from: date)
         let hour = components.hour
         let minutes = components.minute
         let seconds = components.second
-        label.text = "\(hour):\(minutes) \(seconds)"
+        label.text = "\(hour ?? 0):\(minutes ?? 0) \(seconds ?? 0)"
         print("SomeCoolTaskRunning.....")
     }
 }

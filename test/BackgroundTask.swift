@@ -10,34 +10,34 @@ import AVFoundation
 class BackgroundTask {
     
     var player = AVAudioPlayer()
-    var timer = NSTimer()
+    var timer = Timer()
     
     func startBackgroundTask() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(interuptedAudio), name: AVAudioSessionInterruptionNotification, object: AVAudioSession.sharedInstance())
+        NotificationCenter.default.addObserver(self, selector: #selector(interuptedAudio), name: NSNotification.Name.AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
         self.playAudio()
     }
     
     func stopBackgroundTask() {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: AVAudioSessionInterruptionNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
         player.stop()
     }
     
-    @objc private func interuptedAudio(notification: NSNotification) {
-        if notification.name == AVAudioSessionInterruptionNotification && notification.userInfo != nil {
+    @objc fileprivate func interuptedAudio(_ notification: Notification) {
+        if notification.name == NSNotification.Name.AVAudioSessionInterruption && notification.userInfo != nil {
             var info = notification.userInfo!
             var intValue = 0
-            info[AVAudioSessionInterruptionTypeKey]!.getValue(&intValue)
+            (info[AVAudioSessionInterruptionTypeKey]! as AnyObject).getValue(&intValue)
             if intValue == 1 { playAudio() }
         }
     }
     
-    private func playAudio() {
+    fileprivate func playAudio() {
         do {
-            let bundle = NSBundle.mainBundle().pathForResource("3", ofType: "wav")
-            let alertSound = NSURL(fileURLWithPath: bundle!)
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, withOptions:AVAudioSessionCategoryOptions.MixWithOthers)
+            let bundle = Bundle.main.path(forResource: "3", ofType: "wav")
+            let alertSound = URL(fileURLWithPath: bundle!)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with:AVAudioSessionCategoryOptions.mixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
-            try self.player = AVAudioPlayer(contentsOfURL: alertSound)
+            try self.player = AVAudioPlayer(contentsOf: alertSound)
             self.player.numberOfLoops = -1
             self.player.volume = 0.01
             self.player.prepareToPlay()

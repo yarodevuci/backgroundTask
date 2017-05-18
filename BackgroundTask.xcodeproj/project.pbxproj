@@ -200,6 +200,7 @@
 					5BC607ED1D7146AC00D5C97A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = BA563F9L5K;
+						LastSwiftMigration = 0830;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -208,10 +209,12 @@
 					};
 					5BC608011D7146AC00D5C97A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 5BC607ED1D7146AC00D5C97A;
 					};
 					5BC6080C1D7146AC00D5C97A = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 5BC607ED1D7146AC00D5C97A;
 					};
 				};
@@ -421,6 +424,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = run.mytask.forever;
 				PRODUCT_NAME = BackgroundTask;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -436,6 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = run.mytask.forever;
 				PRODUCT_NAME = BackgroundTask;
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -447,6 +452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jfgh.hjhj.testTests;
 				PRODUCT_NAME = BackgroundTask;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundTask.app/BackgroundTask";
 			};
 			name = Debug;
@@ -459,6 +465,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jfgh.hjhj.testTests;
 				PRODUCT_NAME = BackgroundTask;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundTask.app/BackgroundTask";
 			};
 			name = Release;
@@ -470,6 +477,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jfgh.hjhj.testUITests;
 				PRODUCT_NAME = BackgroundTask;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = test;
 			};
 			name = Debug;
@@ -481,6 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jfgh.hjhj.testUITests;
 				PRODUCT_NAME = BackgroundTask;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = test;
 			};
 			name = Release;
