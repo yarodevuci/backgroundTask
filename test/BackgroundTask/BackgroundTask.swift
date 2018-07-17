@@ -9,21 +9,23 @@ import AVFoundation
 
 class BackgroundTask {
     
+    // MARK: - Vars
     var player = AVAudioPlayer()
     var timer = Timer()
     
+    // MARK: - Methods
     func startBackgroundTask() {
-        NotificationCenter.default.addObserver(self, selector: #selector(interuptedAudio), name: NSNotification.Name.AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
+        NotificationCenter.default.addObserver(self, selector: #selector(interuptedAudio), name: .AVAudioSessionInterruption, object: AVAudioSession.sharedInstance())
         self.playAudio()
     }
     
     func stopBackgroundTask() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVAudioSessionInterruption, object: nil)
+        NotificationCenter.default.removeObserver(self, name: .AVAudioSessionInterruption, object: nil)
         player.stop()
     }
     
     @objc fileprivate func interuptedAudio(_ notification: Notification) {
-        if notification.name == NSNotification.Name.AVAudioSessionInterruption && notification.userInfo != nil {
+        if notification.name == .AVAudioSessionInterruption && notification.userInfo != nil {
             var info = notification.userInfo!
             var intValue = 0
             (info[AVAudioSessionInterruptionTypeKey]! as AnyObject).getValue(&intValue)
@@ -33,11 +35,12 @@ class BackgroundTask {
     
     fileprivate func playAudio() {
         do {
-            let bundle = Bundle.main.path(forResource: "3", ofType: "wav")
+            let bundle = Bundle.main.path(forResource: "blank", ofType: "wav")
             let alertSound = URL(fileURLWithPath: bundle!)
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with:AVAudioSessionCategoryOptions.mixWithOthers)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
             try AVAudioSession.sharedInstance().setActive(true)
             try self.player = AVAudioPlayer(contentsOf: alertSound)
+            // Play audio forever by setting num of loops to -1
             self.player.numberOfLoops = -1
             self.player.volume = 0.01
             self.player.prepareToPlay()
